@@ -1,5 +1,31 @@
 #!/bin/bash
 
+
+
+
+
+if ! [[ $EUID != 0 ]];
+then
+   echo "You are root, checking for internet connection..."
+
+else
+
+echo "You must be root to run this script. To become root you can write: $ sudo su     in the terminal!"
+
+exit
+
+fi
+
+if ping -c 1 8.8.8.8 >/dev/null; then
+  echo "The startup-check of the installer was successful. The installer will be started!"
+else
+  echo "You do not have an internet connection. To run the script for the installation, you must have an internet connection!"
+fi
+
+
+
+
+
 echo "Welcome to the Linux Installer!"
 echo "-----------By SimSon-----------"
 
@@ -11,7 +37,7 @@ echo "With this installer you can install the most used applications in minutes!
 
 sleep 5
 
-echo "During the fully automatic installation, they can grab a coffee!"
+echo "During the fully automatic installation, you can grab a coffee!"
 
 sleep 5
 
