@@ -130,7 +130,7 @@ clear
 
 echo "Congratulations, the installation was successful! Now your Linux system is ready. Good luck!"
 
-echo "Ihr Linux System wird in 10 Sekunden neugestartet!"
+echo "Your Linux system will reboot in 10 seconds!"
 
 echo "10"
 echo "9"
