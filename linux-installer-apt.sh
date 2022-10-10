@@ -63,6 +63,8 @@ apt config-manager --add-repo universe
 
 apt config-manager --add-repo multiverse
 
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 apt update && apt upgrade -y
 
 clear
