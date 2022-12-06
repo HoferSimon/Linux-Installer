@@ -6,7 +6,7 @@
 
 if ! [[ $EUID != 0 ]];
 then
-   echo "You are root, checking for internet connection..."
+  echo "You are root, checking for internet connection..."
 
 else
 
