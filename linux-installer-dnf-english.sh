@@ -57,7 +57,7 @@ fi
 
 echo "Welcome to the Linux Installer!"
 echo "-----------By SimSon-----------"
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 sleep 3
 
 clear
@@ -84,7 +84,19 @@ sleep 5
 
 clear
 
-echo "Now the most used applications are installed!"
+echo "Now the most used applications will be installed!"
+
+sleep 5
+
+clear
+
+echo "Firsty we must install the needed packages"
+
+sudo dnf install \
+    https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+
+sudo dnf install \
+    https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 sleep 5
 
@@ -94,7 +106,6 @@ echo "In the first part of the software installation, all dnf programmes (22) wi
 
 dnf install virtualbox -y
 dnf install libreoffice -y
-dnf install geogebra -y
 dnf install p7zip -y
 dnf install filezilla -y
 dnf install chromium -y
@@ -112,6 +123,9 @@ dnf install obs-studio -y
 dnf install krita -y
 dnf install bottles -y
 dnf install mediawriter -y
+dnf install conky -y
+dnf install dnfdragora -y
+
 
 sleep 5
 
@@ -128,6 +142,10 @@ flatpak install flathub com.visualstudio.code -y
 flatpak install flathub com.unity.UnityHub -y
 flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
 flatpak install flathub com.getmailspring.Mailspring -y
+flatpak install flathub org.blender.Blender -y
+flatpak install flathub com.bitwarden.desktop -y
+flatpak install flathub com.github.tchx84.Flatseal -y
+flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
 
 sleep 5
 
