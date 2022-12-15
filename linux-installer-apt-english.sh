@@ -57,7 +57,7 @@ fi
 
 echo "Welcome to the Linux Installer!"
 echo "-----------By SimSon-----------"
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 sleep 3
 
 clear
@@ -78,8 +78,8 @@ clear
 
 echo "The first thing we do is update your system so that all packages are up to date!"
 
-dnf upgrade -y
-
+apt update -y
+sudo apt install flatpak
 sleep 5
 
 clear
@@ -90,28 +90,27 @@ sleep 5
 
 clear
 
-echo "In the first part of the software installation, all dnf programmes (20) will be installed!"
+echo "In the first part of the software installation, all apt programmes (19) will be installed!"
 
-dnf install virtualbox -y
-dnf install libreoffice -y
-dnf install geogebra -y
-dnf install p7zip -y
-dnf install filezilla -y
-dnf install chromium -y
-dnf install steam -y
-dnf install vlc -y
-dnf install audacity -y
-dnf install clamav -y
-dnf install notepadqq -y
-dnf install gimp -y
-dnf install htop -y
-dnf install wine -y
-dnf install fast -y
-dnf install putty -y
-dnf install obs-studio -y
-dnf install krita -y
-dnf install bottles -y
-dnf install mediawriter -y
+apt install virtualbox -y
+apt install libreoffice -y
+apt install geogebra -y
+apt install p7zip -y
+apt install filezilla -y
+apt install chromium -y
+apt install steam -y
+apt install vlc -y
+apt install audacity -y
+apt install clamav -y
+apt install notepadqq -y
+apt install gimp -y
+apt install htop -y
+apt install wine -y
+apt install fast -y
+apt install putty -y
+apt install obs-studio -y
+apt install krita -y
+apt install bottles -y
 
 sleep 5
 
@@ -119,6 +118,8 @@ clear
 
 echo "In the second part of the software installation, all Flatpak programmes (7) will be installed!"
 
+apt install flatpak
+apt install gnome-software-plugin-flatpak
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 flatpak install flathub com.discordapp.Discord -y
