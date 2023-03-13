@@ -1,15 +1,14 @@
 #!/bin/bash
 
+echo "Before the installer can be started, the start-check must be completed. The test checks whether you are root and whether you are connected to the Internet."
+    
+sleep 5
 
+clear
 
 if ! [[ $EUID != 0 ]];
 then
-    echo "Before the installer can be started, the start-check must be completed. The test checks whether you are root and whether you are connected to the Internet."
-    
-    sleep 5
 
-    clear
-    
     echo "Root?"
 
     sleep 3
@@ -47,7 +46,7 @@ else
 
     echo "You do not have an internet connection."
 
-    leep 5
+    sleep 5
 
 exit
 
